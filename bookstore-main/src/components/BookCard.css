@@ -1,0 +1,34 @@
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  width: 150px;
+  margin: 10px;
+}
+
+.image-placeholder {
+  background: #e0e0e0;
+  border-radius: 8px;
+  height: 150px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a0a0a0;
+}
+
+.filled-star {
+  color: #ffc107;
+}
+
+.empty-star {
+  color: #e0e0e0;
+}
+
+.like-icon {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+}

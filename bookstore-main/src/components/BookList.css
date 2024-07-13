@@ -1,0 +1,39 @@
+.book-list {
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.category-tabs button {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.category-tabs .active {
+  background: #e0e0e0;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
