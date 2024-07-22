@@ -1,12 +1,22 @@
 {
-  "name": "backend",
+  "name": "my-express-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "A simple Node.js and Express application",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/app.js",
+    "dev": "nodemon --watch . --legacy-watch ./src/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Yanr",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "axios": "^1.7.2",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.8.0",
+    "validator": "^13.12.0"
+  }
 }
