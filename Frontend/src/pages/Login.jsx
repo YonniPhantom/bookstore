@@ -25,12 +25,12 @@ export default function login() {
         <form className='mt-8'>
           <div className='mb-4'>
             <p>Correo Electrónico</p>
-            <input onChange={setEmail} className='border-2 rounded-md w-full h-8' placeholder='example@domain.com' type="email" />
+            <input onChange={(e) => setEmail(e.target.value)} className='border-2 rounded-md w-full h-8' placeholder='example@domain.com' type="email" />
           </div>
 
           <div className='mb-8'>
             <p>Contraseña</p>
-            <input onChange={setPassword} className='border-2 rounded-md w-full h-8' placeholder='********' type="password" />
+            <input onChange={(e) => setPassword(e.target.value)} className='border-2 rounded-md w-full h-8' placeholder='********' type="password" />
           </div>
 
           <div onClick={handleLogin} className='bg-black text-white w-full h-8 rounded-md cursor-pointer mb-4 flex justify-center items-center'>Iniciar Sesión</div>
@@ -38,7 +38,7 @@ export default function login() {
           <p className='cursor-pointer text-xs underline'>¿Olvidaste tu contraseña?</p>
         </form>
 
-        <div className='flex absolute bottom-4 ml-2'>
+        <div className='flex absolute bottom-4 ml-3'>
           <p className='text-sm'>¿Todavía no tienes una cuenta?</p>
           <Link to={'/register'} className='text-sm ml-2 text-blue-600 underline'>Regístrate</Link>
         </div>
