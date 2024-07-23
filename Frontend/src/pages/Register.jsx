@@ -2,18 +2,20 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
 export default function Register() {
-  const [name, setName] = useState('');
+  const [nombres, setNombres] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [contrasena, setContrasena] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    if (!name || !email || !password || !confirmPassword) return alert('Llena todos los campos');
+    if (!nombres ||  !username || !email || !contrasena || !confirmPassword) return alert('Llena todos los campos');
 
-    if (password.length < 8) return alert('La contraseña debe tener minimo 8 caracteres');
+    if (contrasena.length < 8) return alert('La contraseña debe tener minimo 8 caracteres');
 
-    if(password !== confirmPassword) return alert('Las contraseñas no coinciden');
+    if(contrasena !== confirmPassword) return alert('Las contraseñas no coinciden');
 
     navigate("/");
   }
@@ -29,7 +31,12 @@ export default function Register() {
         <form className='mt-8'>
           <div className='mb-4'>
             <p>Nombre completo</p>
-            <input onChange={(e) => setName(e.target.value)} className='border-2 rounded-md w-full h-8' placeholder='Alan Brito Delgado' type="text" />
+            <input onChange={(e) => setNombres(e.target.value)} className='border-2 rounded-md w-full h-8' placeholder='Alan Brito Delgado' type="text" />
+          </div>
+
+          <div className='mb-4'>
+            <p>Nombre de usuario</p>
+            <input onChange={(e) => setNombres(e.target.value)} className='border-2 rounded-md w-full h-8' placeholder='Alan1234' type="text" />
           </div>
 
           <div className='mb-4'>

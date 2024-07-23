@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
 export default function login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('');
+  const [contrasena, setContrasena] = useState('');
+
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    if (!email || !password) return alert('Llena todos los campos');
+    if (!username || !contrasena) return alert('Llena todos los campos');
 
-    if (password.length < 8) return alert('La contraseña debe tener minimo 8 caracteres');
+    if (contrasena.length < 8) return alert('La contraseña debe tener minimo 8 caracteres');
 
     navigate("/");
   }
@@ -25,12 +26,12 @@ export default function login() {
         <form className='mt-8'>
           <div className='mb-4'>
             <p>Correo Electrónico</p>
-            <input onChange={(e) => setEmail(e.target.value)} className='border-2 rounded-md w-full h-8' placeholder='example@domain.com' type="email" />
+            <input onChange={(e) => setUsername(e.target.value)} className='border-2 rounded-md w-full h-8' placeholder='example@domain.com' type="email" />
           </div>
 
           <div className='mb-8'>
             <p>Contraseña</p>
-            <input onChange={(e) => setPassword(e.target.value)} className='border-2 rounded-md w-full h-8' placeholder='********' type="password" />
+            <input onChange={(e) => setContrasena(e.target.value)} className='border-2 rounded-md w-full h-8' placeholder='********' type="password" />
           </div>
 
           <div onClick={handleLogin} className='bg-black text-white w-full h-8 rounded-md cursor-pointer mb-4 flex justify-center items-center'>Iniciar Sesión</div>
