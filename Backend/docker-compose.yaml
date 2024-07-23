@@ -1,0 +1,13 @@
+version: '3.0'
+
+services:
+  nodeapp:
+    build: 
+       context: ""
+       dockerfile: Dockerfile
+    container_name: nodejs-bookstore
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/usr/app/src
