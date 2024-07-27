@@ -1,1 +1,0 @@
-export const Uri = "http://localhost:3000";
