@@ -17,4 +17,4 @@ async function getData(callback) {
  
   }
 }
-module.exports = {getData, ObjectId};
+module.exports = {getData, ObjectId, client};
