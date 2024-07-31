@@ -1,9 +1,7 @@
-version: '3.0'
-
 services:
   nodeapp:
     build: 
-       context: ""
+       context: "."
        dockerfile: Dockerfile
     container_name: nodejs-bookstore
     restart: always
